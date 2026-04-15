@@ -16,7 +16,7 @@ jobs:
         with:
           publish: "true"
           package-name: openclaw
-          package-namespace: advaithsujith
+          package-namespace: always-further
           package-version: ${{ github.ref_name }}
           package-path: openclaw
           registry-url: https://packs.nono.sh/api/v1
