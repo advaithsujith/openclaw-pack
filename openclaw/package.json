@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "name": "openclaw",
+  "pack_type": "agent",
+  "description": "Sandbox policy and multi-agent coordination for OpenClaw. Ships an improved nono profile covering all openclaw instance directories and a shared coordination bus.",
+  "license": "Apache-2.0",
+  "platforms": ["macos", "linux"],
+  "min_nono_version": "0.29.0",
+  "artifacts": [
+    {
+      "type": "policy",
+      "path": "policy.json",
+      "install_as": "openclaw"
+    },
+    {
+      "type": "plugin",
+      "path": "skills/openclaw-sandbox/SKILL.md"
+    },
+    {
+      "type": "plugin",
+      "path": "hooks/hooks.json"
+    },
+    {
+      "type": "plugin",
+      "path": "bin/nono-hook.sh"
+    }
+  ]
+}
