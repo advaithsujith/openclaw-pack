@@ -13,7 +13,7 @@
       "install_as": "openclaw"
     },
     {
-      "type": "plugin",
+      "type": "instruction",
       "path": "skills/openclaw-sandbox/SKILL.md",
       "install_dir": "~/.claude/skills/openclaw-sandbox"
     },

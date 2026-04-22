@@ -50,7 +50,7 @@ nono run --profile openclaw --home ~/.openclaw-agent1 -- openclaw
 | Artifact | Type | Purpose |
 |---|---|---|
 | `policy.json` | policy | nono sandbox profile for all openclaw instances |
-| `skills/openclaw-sandbox/SKILL.md` | plugin | Teaches the agent its sandbox constraints and coordination bus usage |
+| `skills/openclaw-sandbox/SKILL.md` | instruction | Teaches the agent its sandbox constraints and coordination bus usage |
 | `hooks/hooks.json` | plugin | Registers PostToolUseFailure hook |
 | `bin/nono-hook.sh` | hook | Hook script: injects capability context on permission denial |
 
