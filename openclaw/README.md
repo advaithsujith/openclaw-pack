@@ -30,7 +30,7 @@ Agents can use this to avoid duplicating work, signal task ownership, or broadca
 ## Installation
 
 ```bash
-nono pull openclaw
+nono pull always-further/openclaw
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ nono run --profile openclaw --home ~/.openclaw-agent1 -- openclaw
 | `policy.json` | policy | nono sandbox profile for all openclaw instances |
 | `skills/openclaw-sandbox/SKILL.md` | plugin | Teaches the agent its sandbox constraints and coordination bus usage |
 | `hooks/hooks.json` | plugin | Registers PostToolUseFailure hook |
-| `bin/nono-hook.sh` | plugin | Hook script: injects capability context on permission denial |
+| `bin/nono-hook.sh` | hook | Hook script: injects capability context on permission denial |
 
 ## Policy Details
 
