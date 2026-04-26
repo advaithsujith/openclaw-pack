@@ -11,7 +11,7 @@ nono packs for [OpenClaw](https://openclaw.ai) AI agents.
 ## Installation
 
 ```bash
-nono pull always-further/openclaw --registry https://packs.nono.sh
+nono pull always-further/openclaw
 ```
 
 ## Usage
@@ -34,13 +34,12 @@ nono run --profile openclaw --home ~/.openclaw-agent2 -- openclaw
 
 Each pack is a directory containing:
 
-- `package.json` — pack metadata (name, type, version requirements)
+- `package.json` — pack metadata (name, version requirements, artifacts)
 - `policy.json` — nono sandbox profile (filesystem, network, IPC capabilities)
-- `skills/` — markdown instruction files that teach the agent its constraints
-- `hooks/` — hook event definitions
+- `skills/` — instruction files that teach the agent its constraints
 - `bin/` — hook scripts that fire on sandbox events
 
-See the [nono registry](https://packs.nono.sh) to browse and pull packs.
+See the [nono registry](https://registry.nono.sh) to browse and pull packs.
 
 ## Publishing
 

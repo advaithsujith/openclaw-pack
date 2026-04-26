@@ -29,8 +29,10 @@ Agents can use this to avoid duplicating work, signal task ownership, or broadca
 
 ## Installation
 
+Requires nono >= 0.42.0 (`cargo install nono-cli`).
+
 ```bash
-nono pull always-further/openclaw --registry https://packs.nono.sh
+nono pull always-further/openclaw
 ```
 
 ## Usage
@@ -49,9 +51,9 @@ nono run --profile openclaw --home ~/.openclaw-agent1 -- openclaw
 
 | Artifact | Type | Purpose |
 |---|---|---|
-| `policy.json` | profile | nono sandbox profile; declares the PostToolUseFailure hook for auto-registration |
-| `skills/openclaw-sandbox/SKILL.md` | instruction | Teaches the agent its sandbox constraints and coordination bus usage |
-| `bin/nono-hook.sh` | hook | Hook script: injects capability context on permission denial (permission errors only) |
+| `policy.json` | `profile` | nono sandbox profile covering all standard OpenClaw directories |
+| `skills/openclaw-sandbox/SKILL.md` | `instruction` | Teaches the agent its sandbox constraints and coordination bus usage |
+| `bin/nono-hook.sh` | `hook` | Injects capability context on permission denial |
 
 ## Policy Details
 
@@ -68,10 +70,9 @@ The profile:
 ## Package Metadata
 
 - Name: `openclaw`
-- Pack type: `agent`
 - Platforms: `macos`, `linux`
 - License: `Apache-2.0`
-- Min nono version: `0.29.0`
+- Min nono version: `0.42.0`
 
 ## Directory Layout
 
@@ -86,3 +87,5 @@ openclaw/
     └── openclaw-sandbox/
         └── SKILL.md
 ```
+
+> Note: `hooks/hooks.json` was removed in 0.1.3. Hook registration is handled directly by the `hook` artifact type in `package.json`.
